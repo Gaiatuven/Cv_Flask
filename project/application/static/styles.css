@@ -1,0 +1,494 @@
+/* Import Lato font */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic');
+
+/* Import FontAwesome */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* Utils */
+.clear {
+  clear: both;
+}
+.purple {
+  color: black; /* Adjusted color */
+}
+
+.block {
+  margin: 25px 30px;
+}
+.block h1 {
+  margin-left: -5px;
+  font-weight: 200;
+}
+
+.last.block {
+  margin-bottom: 110px;
+}
+
+.horizontal_list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.horizontal_list li {
+	float: none;
+	display: inline-block; /* Add this line to make list items display in a line */
+}
+.horizontal_list li:before {
+  content: none;
+}
+.horizontal_list li {
+  padding-left: 0;
+  text-indent: 0;
+  text-align: left;
+}
+
+/* Horizontal Line Fixes */
+.line_left:first-child,
+.line_right:first-child {
+  border-top: 2px solid #48DA9B; /* Change the color and thickness as needed */
+  width: 100%;
+  flex-grow: 1;
+}
+
+.left_circle:first-child,
+.right_circle:first-child {
+  background: #48DA9B; /* Change the color as needed */
+}
+
+.central_circle:first-child {
+  background: #48DA9B; /* Change the color as needed */
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+}
+
+/* Additional Styling for Circles */
+.left_circle:first-child::before,
+.right_circle:first-child::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #434247; /* Change the color as needed */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Main tags */
+body {
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png) repeat;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #48DA9B;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+h2 {
+  font-size: 28px;
+  margin: 32px 0 24px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+blockquote,
+p,
+a,
+li {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  color: black;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding-left: 1em;
+  text-indent: -.7em;
+}
+li:before {
+  content: "• ";
+  color: #837c9a;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+/* Containers size */
+#main_container {
+  width: 960px;
+  margin: 0 auto;
+}
+#header {
+  height: 150px;
+  border-bottom: 1px solid #403F44;
+}
+.header_logotype_container {
+  width: 260px;
+  height: 130px;
+  border-right: 1px solid #403F44;
+  float: left;
+}
+.header_menu_container {
+  height: 130px;
+  width: 699px;
+  float: left;
+}
+.header_menu_container a {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
+#left_col {
+  width: 260px;
+  float: left;
+}
+#content_container {
+  width: 699px;
+  border-left: 1px solid #403F44;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#footer {
+  width: 680px;
+  height: 60px;
+  border-top: 1px solid #48DA9B;
+  display: inline-block;
+}
+
+/* HEADER */
+.logotype_name {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin: 43px 0 0;
+}
+
+.download_print_buttons {
+  width: 225px;
+  height: 45px;
+  float: right;
+}
+.download_print_buttons a {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-style: italic;
+  line-height: 90px;
+  padding: 16px 17px;
+  background: transparent #29C782;
+}
+.download_print_buttons a:hover {
+  background: #48DA9B;
+}
+.download_print_buttons .icon {
+  color: #02070a;
+  padding-right: 6px;
+  font-style: normal;
+  font-size: 18px;
+}
+.icon-angle-double-right {
+  position: top;
+  top: 2px;
+}
+.download_print_buttons a:hover .icon {
+  color: #e4e3e8;
+}
+
+.header_menu {
+  width: 699px;
+  margin-top: 55px;
+  margin-left: 0px;
+}
+.header_menu a {
+  text-decoration: none;
+  padding: 0 18px;
+  border-left: 1px solid #e4e3e8;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header_menu a.no_border {
+  border-left: none;
+}
+.header_menu a:hover {
+  color: #837c9a;
+}
+
+/* LEFT NAV */
+#left_nav h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile_frame {
+  width: 230px;
+  height: 290px;
+  background: black;
+  border: 1px solid #403F44;
+  margin-top: 30px;
+}
+
+.profile_picture img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.hello_content,
+.contact_details_content {
+  margin-top: 25px;
+}
+
+.hello_content {
+  width: 230px;
+}
+.contact_details_content h2 + p.purple {
+  margin-top: 10px;
+}
+.contact_details_content p {
+  margin: 0;
+}
+.contact_details_content p.purple {
+  margin-top: 25px;
+}
+
+.send_message_button:hover,
+.special_button:hover {
+  background: #29C782;
+}
+
+.get_social_content {
+  text-align: left;
+}
+
+.get_social_content h2 {
+  margin-bottom: 8px;
+}
+
+.social_icons {
+  margin: 0;
+}
+
+.social_icons a {
+  text-align: left;
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin-right: 10px; /* Add margin to separate social icons */
+}
+
+.social_icons li {
+  display: inline-block; /* Display list items horizontally */
+}
+
+.facebook:hover {
+  background: #3b5998;
+  color: #dfe3ee;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.linkedin:hover {
+  background: #007bb6;
+  color: #fff;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.github:hover {
+  background: #24292e; /* Adjusted GitHub color */
+  color: #ffffff;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.social_icons li img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+.social_icons li img + span {
+  margin-left: 5px;
+}
+.footer_name {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Profile Content */
+.profile_quote {
+  position: relative;
+}
+.profile_quote p {
+  font-size: 17px;
+  width: 455px;
+}
+.profile_quote .entypo-quote {
+  color: #3d3a41;
+  font-size: 80px;
+  font-style: normal;
+  position: absolute;
+  top: -20px;
+  right: 70px;
+  cursor: default;
+}
+
+.philosophy_content {
+  margin-top: 20px;
+}
+.philosophy_content p {
+  margin: 0;
+  width: 370px;
+  float: left;
+}
+.philosophy_content ul {
+  float: left;
+  padding-left: 40px;
+}
+
+/* section */
+.section {
+  margin: 20px 0;
+}
+
+.section-title {
+  font-weight: bold;
+}
+
+.section2 {
+  margin: 20px 0;
+}
+
+.section-title2 {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.skills {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills li {
+  margin: 5px;
+  background-color: #555;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.skills2 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.skills2 ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills2 li {
+  margin: 5px;
+  background-color: #555;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.skills2 ul li:hover {
+  background: #29C782;
+  color: #fff;
+  border-radius: 20px; /* Adjust the radius as needed */
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.skills ul li:hover {
+  background: #29C782;
+  color: #fff;
+  border-radius: 20px; /* Adjust the radius as needed */
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+pre {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  #main_container {
+    width: 100%; /* Adjusted width for small screens */
+  }
+
+  #left_col,
+  #content_container {
+    width: 100%; /* Full width on small screens */
+    border: none; /* Remove borders on small screens */
+    margin-top: 20px;
+  }
+}
+
+/* Add the following CSS to align education with experience and profile */
+
+/* Align education with experience and profile */
+.Education {
+  float: right;
+  width: 250px; /* Adjust the width as needed */
+  margin-top: 20px;
+}
+
+/* Additional adjustments for responsiveness */
+@media only screen and (max-width: 768px) {
+  .education {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
