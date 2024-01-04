@@ -1,17 +1,16 @@
 import sqlite3
 import os
 
-
-# Get the absolute path to the data directory
-data_directory = os.path.abspath('project/data')
+# Get the path to the data directory relative to the script's location
+data_directory = os.path.join(os.path.dirname(__file__), '../data')
 
 # Ensure the data directory exists
 os.makedirs(data_directory, exist_ok=True)
 
 database_path = os.path.join(data_directory, 'cv_database.db')
 
-# Connect to SQLite database (or create it if it doesn't exist)
-conn = sqlite3.connect('database_path')
+# Correctly connect to the database using the constructed path
+conn = sqlite3.connect(database_path)  # Corrected path usage
 
 # Create a cursor object to interact with the database
 cursor = conn.cursor()
