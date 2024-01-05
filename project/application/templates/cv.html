@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GC - CV</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cv_info.name }}'s CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  <header>
-    <h1>Gregory Claassen</h1>
-    <p class="contact-info">
-      <a href="mailto:[your email]">ggwiese@gmail.com</a> | <a href="tel:+[your phone number]"> +27 73 464 4578</a> 
-    </p>
-  </header>
-  <main>
-    <section class="profile">
-      <h2>Profile Summary</h2>
-      <p>Dedicated and resourceful Administration professional with 13 years of experience driving operational excellence. Skilled in training and empowering teams, optimizing telephony systems like Avaya, and ensuring accurate medical coding in healthcare settings. Passionate about exceeding customer expectations through prompt and efficient service. Enthusiastic about applying skills and experience in a Cloud industry.</p>
-    </section>
-    <section class="skills2">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Python</li>
-        <li>Streamlit</li>
-        <li>Flask</li>                    
-        <li>PostgreSQL</li>
-      </ul>
-    </section>
-    <section class="experience">
-      <h2>Experience</h2>
-      <ul>
-          <h4>Telephony Agent  - Edcon (2009 - 2010)</h4>
-          <ul>
-            <li>Customer services, Debt Collection, New Accounts, Call Centre.</li>
-          </ul>
-          <h4>Administration Specialist - Old Mutual Claims and Underwriting -  (2010 - Current)</h4>
-          <ul>
-            <li>Managed and tracked various daily administrative tasks across departments, including medical coding, customer reassurance, medical investigations, and auditing.</li>
-            <li>Maintained accurate and up-to-date spreadsheets (MIS) for efficient data management.</li>
-            <li>Handled web recall activities and ensured compliance with enquiry categories and acceptance of terms.</li>
-            <li>Provided coaching and training for staff on Greenlight / OMP product and process knowledge, empowering them to work independently and deliver excellent service.</li>
-            <li>Offered empathetic and efficient inbound phone line support for intermediaries via telephonic contact model, exceeding customer satisfaction expectations.</li>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <section class="education">
-      <h2>Education</h2>
-      <ul>
-          <li>NDiploma in Marketing Management - University of South Africa (UNISA) (2009)</li>
-          <li>National Certificate N4-N6 in Marketing Management from Northlink College (2006 - 2008).</li>
-          <li>Basic Computer Literacy Certificate from Office Administration (2009)</li>
-          <li>ICDL (International Computer Driver’s License) Certificate from Northlink College (2009)</li>
-      </ul>
-    </section>
-    <section class="social-media">
-      <h3>Social Media</h3>
-      <ul>
-        <li><a href="https://github.com/Gaiatuven">Github</a><span class="fontawesome-github"></span></li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; GClaassen - 2024</p>
-  </footer>
+    <div class="container">
+        <h1>{{ cv_info.name }}'s CV</h1>
+
+        {% if cv_info %}
+            <section id="contact">
+                <h2>Contact Information</h2>
+                <p>Email: {{ cv_info.email }}</p>
+                <p>Phone: {{ cv_info.phone }}</p>
+                <p>Location: {{ cv_info.location }}</p>
+            </section>
+
+            <section id="profile-summary">
+                <h2>Profile Summary</h2>
+                <p>{{ cv_info.education }}</p>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    {% for skill in cv_info.skills %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <ul>
+                    {% for exp in cv_info.experience %}
+                        <li>{{ exp }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    {% for project in cv_info.projects %}
+                        <li>{{ project }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section id="social-media">
+                <h2>Social Media</h2>
+                <p>Github: <a href="{{ cv_info.github }}" target="_blank">{{ cv_info.github }}</a></p>
+            </section>
+
+            <footer>&copy; {{ current_year }} - {{ cv_info.name }}</footer>
+        {% else %}
+            <p>No CV information available.</p>
+        {% endif %}
+    </div>
 </body>
 </html>
