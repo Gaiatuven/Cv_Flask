@@ -21,13 +21,13 @@ CREATE TABLE IF NOT EXISTS cv_data (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
     email TEXT,
-    phone TEXT,       -- Add phone column
-    location TEXT,    -- Add location column
-    education TEXT,   -- Add education column
+    phone TEXT,      
+    location TEXT,    
+    education TEXT,   
     skills TEXT,
     experience TEXT,
     projects TEXT,
-    github TEXT       -- Add github column
+    github TEXT       
 );
 '''
 
