@@ -492,3 +492,11 @@ pre {
   }
 }
 
+.cv_name h1{
+  text-align: center;
+}
+
+#profile-summary {
+  text-align: left;
+  ;
+}
