@@ -64,7 +64,8 @@ def cv():
                 'location': cv_data[0]['location'],
                 'education': cv_data[0]['education'],
                 'skills': cv_data[0]['skills'].split(', '),  # Split skills into a list
-                'experience': cv_data[0]['experience'].split('\n'),  # Split experience into a list
+                # 'experience': cv_data[0]['experience'].split('\n'),  # Split experience into a list
+                'experience': [line.strip() for line in cv_data[0]['experience'].split('\n') if line.strip()],
                 'projects': cv_data[0]['projects'].split('\n'),  # Split projects into a list
                 'github': cv_data[0]['github'],
             }
