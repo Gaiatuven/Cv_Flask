@@ -8,21 +8,31 @@
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary2">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('cv') }}">View CV</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
   <!-- MAIN CONTAINER -->
   <div id="main_container">
     <!-- HEADER -->
     <div id="header">
       <!-- LOGOTYPE/NAME -->
       <div class="header_logotype_container">
-        <h1 class="logotype_name">{{ cv_info.name }}<span class="purple">Claassen</span></h1>
+        <h1 class="logotype_name">Gregory Claassen<span class="purple"></span></h1>
       </div>
       <!-- MAIN MENU -->
       <div class="header_menu_container">
-        <ul class="download_print_buttons horizontal_list">
-          <li><a href="#"><span class="fontawesome-download-alt"></span>  Download CV</a></li>
-          <li><a href="#"><span class="fontawesome-print "></span>  Print CV</a></li>
-        </ul>
       </div>
+      
+      
     </div>
     <!-- LEFT COL -->
     <div id="left_col">
@@ -40,7 +50,7 @@
         <p class="purple">Phone:</p>
         <p>+27 073 464 4578</p>
         <p class="purple">Email:</p>
-        <p>{cv_info.email}</p>
+        <p>ggwiese@gmail.com</p>
         <p class="purple">Address:</p>
         <p>South Africa</p>
         <p>Cape Town</p>
@@ -69,7 +79,7 @@
           <li>
             <a class="Github" href="https://github.com/Gaiatuven">
               <i class="fi fi-brands-github"></i>
-              <span class="social">Github</span><span class="zocial-dribbble"></span>
+              <span class="social">Github</span>
             </a>
           </li>
         </ul>
@@ -77,11 +87,11 @@
       
     </div>
     <!-- PROFILE CONTENT -->
-    <div id="content_container">				
+    <div id="content_container">        
       <div class="block">
         <h1>AWS Projects</h1>
         <ul>
-          <li>Clood Resume challenge</li>
+          <li>Cloud Resume challenge</li>
         </ul>
         <blockquote class="profile_quote">
           <span class="entypo-quote"></span>
@@ -89,7 +99,7 @@
       </div>
       <div class="block">
         <h2>A few words about me</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, molestias!</p>				
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, molestias!</p>        
       </div>
       <div class="horizontal_line">
         <div class="line_left"></div>

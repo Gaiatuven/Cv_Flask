@@ -136,7 +136,7 @@ li {
   text-indent: -.7em;
 }
 li:before {
-  content: "• ";
+  content: " ";
   color: #837c9a;
   font-size: 20px;
   padding-right: 8px;
@@ -324,7 +324,7 @@ li:before {
 }
 
 .github:hover {
-  background: #24292e; /* Adjusted GitHub color */
+  background: #4078c0; /* Adjusted GitHub color */
   color: #ffffff;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -499,4 +499,12 @@ pre {
 #profile-summary {
   text-align: left;
   ;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--bs-navbar-active-color);
+}
+
+.navbar.navbar-expand-lg.bg-body-tertiary2 {
+  justify-content: right; /* Adjust for spacing */
 }

@@ -39,14 +39,7 @@ if not os.path.isfile(database_path):
 # Define your routes below
 @app.route('/')
 def index():
-    try:
-        cv_data = fetch_cv_data(database_path)  # Use fetch_cv_data function
-        if cv_data:
-            return render_template('index.html', cv_info=cv_data)
-        else:
-            return render_template('index.html', name="Default Name", cv_info=None)
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
+    return render_template('index.html')
 
 # Modify the cv route in your Flask app (app.py)
 @app.route('/cv')

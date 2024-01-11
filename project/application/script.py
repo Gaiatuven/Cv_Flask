@@ -34,5 +34,3 @@ def fetch_cv_data(database_path):
 # Example usage
 database_path = 'project/application/data/cv_database.db'
 cv_data = fetch_cv_data(database_path)
-for entry in cv_data:
-    print(entry)
